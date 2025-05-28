@@ -5,11 +5,11 @@ const rl = readline.createInterface({
 });
 
 rl.question('请输入一个数组',function(input) {
-    myArray = input.split(',').map(item => {
-			item.trim();
-			item = Number(item);
-			return(item);			
-		});
+    let myArray = input.split(',').map(item => {
+	item = item.trim();
+	item = Number(item);
+	return(item);		
+    });
     console.log(myArray);
     rl.close();
 });
