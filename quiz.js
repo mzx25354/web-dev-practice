@@ -1,4 +1,16 @@
-// Created on iPad.
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-console.log("Hello, World!")
+rl.question('请输入一个数组',function(input) {
+    myArray = input.split(',').map(item => {
+			item.trim();
+			item = Number(item);
+			return(item);			
+		});
+    console.log(myArray);
+    rl.close();
+});
 
